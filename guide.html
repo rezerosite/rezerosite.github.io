@@ -17,6 +17,7 @@
       }
 
       #nav {
+        display: block;
         position: fixed !important;
         top: auto !important;
         bottom: 0;
@@ -30,8 +31,15 @@
       }
 
       #nav ul {
+        display: flex;
         width: 100%;
         box-sizing: border-box;
+      }
+
+      #nav ul li {
+        flex: 1;
+        min-width: 0;
+        margin: 0;
       }
 
       #nav ul li a {
@@ -39,9 +47,21 @@
         align-items: center;
         justify-content: center;
         gap: 0.35em;
+        width: 100%;
+        box-sizing: border-box;
         padding: 0.5em 0.75em;
         font-size: 0.9em;
         text-align: center;
+      }
+
+      @media screen and (max-width: 480px) {
+        #nav ul li a {
+          min-height: 3.5em;
+          height: auto;
+          padding: 0.5em 0.25em;
+          font-size: 0.75em;
+          line-height: 1.2;
+        }
       }
 
       #contact.main.special {
